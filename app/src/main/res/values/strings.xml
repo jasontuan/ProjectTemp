@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="your_to_do_list_is_empty_because_you_don_t_have_any_tasks_create_tasks_for_your_goals_in_routine_tab">Your To-Do List is empty because you don\'t have any tasks. Create tasks for your goals in Routine Tab</string>
+    <string name="to_do_list">TO-DO LIST</string>
+    <string name="to_do_list_2">To-Do List</string>
+    <string name="celendar">Celendar</string>
+</resources>
