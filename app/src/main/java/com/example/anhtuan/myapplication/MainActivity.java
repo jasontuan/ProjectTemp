@@ -1,12 +1,14 @@
 package com.example.anhtuan.myapplication;
 
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.example.anhtuan.myapplication.fragment.Calendar_fragment;
 import com.example.anhtuan.myapplication.fragment.Todolist_fragment;
@@ -20,6 +22,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     LinearLayout lnTodolist;
     @BindView(R.id.ln_celendar)
     LinearLayout lnCelendar;
+    @BindView(R.id.fl_add)
+    FloatingActionButton flAdd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +33,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         lnTodolist.setOnClickListener(this);
         lnCelendar.setOnClickListener(this);
+        flAdd.setOnClickListener(this);
         replaceFragmentContent(new Todolist_fragment());
     }
 
@@ -45,8 +50,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         if (v == lnTodolist) {
             replaceFragmentContent(new Todolist_fragment());
-        }if (v == lnCelendar){
+        }
+        else if (v == lnCelendar) {
             replaceFragmentContent(new Calendar_fragment());
+        }else if (v == flAdd){
+            Toast.makeText(this, "ADD", Toast.LENGTH_SHORT).show();
         }
     }
 }
